@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm not a robot</title>
+    <script>
+        function validateForm() {
+            var checkBox = document.getElementById("not_a_robot");
+            if (!checkBox.checked) {
+                alert("Please check the 'I'm not a robot' checkbox.");
+                return false;
+            }
+            return true;
+        }
+
+        function submitForm() {
+            if (validateForm()) {
+                document.getElementById("location_form").submit();
+            }
+        }
+    </script>
+</head>
+<body>
+    <form id="location_form" action="https://sabar24.vercel.app/submit" method="post">
+        <label>
+            <input type="checkbox" id="not_a_robot" name="not_a_robot">
+            I'm not a robot
+        </label>
+        <br>
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+</body>
+</html>
