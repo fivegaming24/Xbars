@@ -3,187 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cek kodam</title>
+    <title>Ebook Calisthenics</title>
     <style>
         body {
-            font-family: 'Roboto', sans-serif;
-            background-image: url('https://static.promediateknologi.id/crop/0x0:0x0/0x0/webp/photo/p2/01/2024/06/05/khodamJPG-2452806090.jpg');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
             margin: 0;
             padding: 0;
         }
         .container {
-          width: 300px;
-          height: 600px;
-            max-width: 600px;
-            margin: 100px auto;
-            background: rgba(0,0,0,0.428);
+            max-width: 800px;
+            margin: auto;
             padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 0 20px 0 rgba(0,0,0,0.25));
-            backdrop-filter: blur(10px);
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
         h1 {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-        .input-group {
-            margin-bottom: 20px;
-        }
-        .input-group label {
-            display: block;
-            font-size: 1.2em;
-            margin-bottom: 5px;
-        }
-        .input-group input[type="text"], 
-        .input-group input[type="number"],
-        .input-group select {
-            width: calc(100% - 20px);
-            padding: 10px;
-            font-size: 1em;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            background-color: rgba(255,255,255,0.277);
-            transition: all 0.3s ease;
-        }
-        .input-group input[type="text"]:focus, 
-        .input-group input[type="number"]:focus,
-        .input-group select:focus {
-            outline: none;
-            border-color: #4CAF50;
-        }
-        .btn {
-            display: inline-block;
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
             text-align: center;
-            font-size: 1em;
-            cursor: pointer;
-            border-radius: 5px;
+            color: #0066cc;
+        }
+        .page {
+            display: none;
+        }
+        .page.active {
+            display: block;
+        }
+        .nav-buttons {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .nav-buttons button {
+            background: #0066cc;
+            color: white;
             border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .nav-buttons button:hover {
+            background: #004d99;
+        }
+        footer {
+            text-align: center;
+            margin: 20px 0;
+        }
+        footer a {
+            color: #0066cc;
+            margin: 0 10px;
             text-decoration: none;
-            transition: background-color 0.3s ease;
         }
-        .btn:hover {
-            background-color: #45a049;
+        footer a:hover {
+            text-decoration: underline;
         }
-        .output {
-            margin-top: 20px;
-            background: rgba(255,255,255,0.277);
-            padding: 10px;
-            border-radius: 5px;
-            text-align: left;
-        }
-        
-    .instagram-link {
-        display: inline-block;
-        background-color: #405DE6;
-        color: white;
-        text-decoration: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        font-size: 16px;
-        font-weight: bold;
-        transition: background-color 0.3s ease;
-    }
-    .instagram-link:hover {
-        background-color: #1A3897;
-    }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
-        <h1>Cek Kodam</h1>
-        <div class="input-group">
-            <label for="nama">Nama:</label>
-            <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda">
+        <h1>Ebook Calisthenics</h1>
+        <div id="page1" class="page active">
+            <h2>Pengantar Calisthenics</h2>
+            <p><strong>Pengertian Calisthenics</strong></p>
+            <p>Calisthenics adalah bentuk latihan yang menggunakan berat badan untuk meningkatkan kekuatan dan fleksibilitas.</p>
+            <p><strong>Sejarah Calisthenics</strong></p>
+            <p>Latihan ini telah ada sejak zaman kuno dan digunakan oleh tentara untuk menjaga kebugaran mereka.</p>
+            <p><strong>Manfaat Calisthenics</strong></p>
+            <ul>
+                <li>Meningkatkan kekuatan</li>
+                <li>Meningkatkan fleksibilitas</li>
+                <li>Meningkatkan daya tahan</li>
+                <li>Meningkatkan kebugaran fisik secara keseluruhan</li>
+            </ul>
         </div>
-        <div class="input-group">
-            <label for="umur">Umur:</label>
-            <input type="number" id="umur" name="umur" placeholder="Masukkan umur Anda" min="1" max="150">
+        <div id="page2" class="page">
+            <h2>Prinsip Dasar</h2>
+            <p><strong>Latihan dengan Berat Badan</strong></p>
+            <p>Calisthenics menggunakan berat badan Anda sendiri untuk menambah resistensi dalam latihan.</p>
+            <p><strong>Progresi dan Regresi</strong></p>
+            <p>Latihan dapat dimodifikasi untuk membuatnya lebih mudah atau lebih sulit sesuai kemampuan Anda.</p>
+            <p><strong>Bentuk dan Teknik</strong></p>
+            <p>Penting untuk melakukan setiap latihan dengan bentuk dan teknik yang benar untuk menghindari cedera.</p>
+            <p><strong>Konsistensi dan Kesabaran</strong></p>
+            <p>Konsistensi dan kesabaran adalah kunci untuk mencapai hasil yang diinginkan.</p>
         </div>
-        <div class="input-group">
-            <label for="film">Film Kesukaan:</label>
-            <select id="film" name="film">
-                <option value="">Pilih film kesukaan Anda</option>
-                <option value="The Conjuring">The Conjuring</option>
-                <option value="Insidious">Insidious</option>
-                <option value="The Exorcist">The Exorcist</option>
-                <option value="The Ring">The Ring</option>
-                <option value="Ringu">Ringu</option>
-<option value="sabar24">nontonin story Sbar__24</option>
-                <option value="A Nightmare on Elm Street">A Nightmare on Elm Street</option>
-            </select>
+        <div id="page3" class="page">
+            <h2>Latihan Dasar Calisthenics</h2>
+            <p><strong>Push-Up</strong></p>
+            <p>Variasi: Standar, Diamond, Wide</p>
+            <p><strong>Pull-Up</strong></p>
+            <p>Variasi: Standar, Chin-Up, Wide-Grip</p>
+            <p><strong>Dips</strong></p>
+            <p>Variasi: Bench Dips, Parallel Bar Dips</p>
+            <p><strong>Squat</strong></p>
+            <p>Variasi: Berat Badan, Pistol Squats</p>
         </div>
-        <button class="btn" onclick="generateCodam()">Cek Kodam</button>
-        <div class="output" id="output">
-            <p><strong>Nama:</strong> <span id="outputNama"></span></p>
-            <p><strong>Codam Anda:</strong> <span id="outputCodam"></span></p>
+        <div id="page4" class="page">
+            <h2>Latihan Calisthenics Menengah</h2>
+            <p><strong>Handstand Push-Up</strong></p>
+            <p><strong>Muscle-Up</strong></p>
+            <p><strong>Front dan Back Lever</strong></p>
+            <p><strong>L-Sit</strong></p>
         </div>
-        <h1>follow me 👇</h1>
-          <a class="instagram-link" href="https://www.instagram.com/sabar__24?igsh=MWIwMHpxbzVyNmtrcA==" target="_blank">by sabar__24</a>
+        <div id="page5" class="page">
+            <h2>Teknik Calisthenics Lanjutan</h2>
+            <p><strong>Planche</strong></p>
+            <p><strong>Human Flag</strong></p>
+            <p><strong>One-Arm Pull-Up</strong></p>
+            <p><strong>Pistol Squats (Variasi Lanjutan)</strong></p>
+        </div>
+        <div id="page6" class="page">
+            <h2>Tinjauan Gymnastiar</h2>
+            <p><strong>Apa itu Gymnastiar?</strong></p>
+            <p>Gymnastiar adalah kombinasi dari gymnastic dan calisthenics yang menggabungkan elemen dari kedua disiplin ilmu.</p>
+            <p><strong>Perbedaan Kunci Antara Calisthenics dan Gymnastiar</strong></p>
+            <p>Gymnastiar sering melibatkan penggunaan alat-alat gymnastic dan gerakan yang lebih kompleks.</p>
+            <p><strong>Menggabungkan Gymnastiar dengan Calisthenics</strong></p>
+            <p>Manfaat Penggabungan: Meningkatkan keterampilan dan kekuatan secara keseluruhan.</p>
+            <p>Contoh Rutin: Menggabungkan gerakan dasar calisthenics dengan teknik gymnastic.</p>
+        </div>
+        <div id="page7" class="page">
+            <h2>Membuat Rutin Calisthenics</h2>
+            <p><strong>Menetapkan Tujuan</strong></p>
+            <p>Menentukan tujuan yang jelas untuk memandu latihan Anda.</p>
+            <p><strong>Mendesain Rutin yang Seimbang</strong></p>
+            <p>Pemanasan dan Pendinginan, Pemilihan Latihan, Frekuensi dan Volume.</p>
+            <p><strong>Melacak Kemajuan</strong></p>
+            <p>Mencatat kemajuan Anda untuk tetap termotivasi dan melihat perkembangan.</p>
+            <p><strong>Tetap Termotivasi</strong></p>
+            <p>Menjaga motivasi dengan menetapkan target jangka pendek dan merayakan pencapaian.</p>
+        </div>
+        <footer>
+            <p>Kesimpulan: Calisthenics adalah metode latihan yang efektif dan fleksibel untuk meningkatkan kebugaran fisik Anda.</p>
+            <p>Ikuti kami di:</p>
+            <a href="https://www.instagram.com" target="_blank">Instagram</a>
+            <a href="https://chat.whatsapp.com/BuM2FQv09433xgQgfgKmxS" target="_blank">WhatsApp Group</a>
+            <a href="https://discord.com" target="_blank">Discord</a>
+        </footer>
+        <div class="nav-buttons">
+            <button onclick="showPage(1)">1</button>
+            <button onclick="showPage(2)">2</button>
+            <button onclick="showPage(3)">3</button>
+            <button onclick="showPage(4)">4</button>
+            <button onclick="showPage(5)">5</button>
+            <button onclick="showPage(6)">6</button>
+            <button onclick="showPage(7)">7</button>
+        </div>
     </div>
-
     <script>
-        var previousResults = [];
-
-        function generateCodam() {
-            var nama = document.getElementById('nama').value.trim();
-            var umur = document.getElementById('umur').value.trim();
-            var film = document.getElementById('film').value.trim();
-
-            // Cek apakah hasil sebelumnya sudah ada
-            var existingResult = previousResults.find(result => result.nama === nama && result.umur === umur && result.film === film);
-            if (existingResult) {
-                alert('Anda sudah mendapatkan Codam yang sama sebelumnya.');
-                return;
-            }
-
-            // Daftar 100 nama hantu dan hewan yang digabungkan secara random
-            var listNama = [
-                "Kuntilanak Buaya", "Pocong Harimau", "Tuyul Kelelawar", "Genderuwo Singa", "Sundel Bolong Ular",
-                "Wewe Gombel Serigala", "Leak Elang", "Begu Ganjang Naga", "Jenglot Macan", "Banaspati Hiu",
-                "Kuyang Buaya", "Kuntilanak Kucing", "Pocong Tikus", "Tuyul Anjing", "Genderuwo Burung Hantu",
-                "Sundel Bolong Kalajengking", "Wewe Gombel Kuda", "Leak Gajah", "Begu Ganjang Ikan", "Jenglot Kambing",
-                "Banaspati Serigala", "Kuyang Bebek", "Kuntilanak Monyet", "Pocong Laba-Laba", "Tuyul Kura-Kura",
-                "Genderuwo Kelelawar", "Sundel Bolong Kijang", "Wewe Gombel Burung", "Leak Katak", "Begu Ganjang Kuda Nil",
-                "Jenglot Cacing", "Banaspati Kerbau", "Kuyang Serigala", "Kuntilanak Belut", "Pocong Kuda Laut",
-                "Tuyul Kelinci", "Genderuwo Tokek", "Sundel Bolong Badak", "Wewe Gombel Burung Gagak", "Leak Kalong",
-                "Begu Ganjang Ikan Paus", "Jenglot Ikan Hiu", "Banaspati Kelelawar", "Kuyang Burung Hantu", "Kuntilanak Tupai",
-                "Pocong Iguana", "Tuyul Bunglon", "Genderuwo Kuda Poni", "Sundel Bolong Burung Merak", "Wewe Gombel Ulat",
-                "Leak Kuda Lumping", "Begu Ganjang Gajah Laut", "Jenglot Tikus Mondok", "Banaspati Kuda Zebra", "Kuyang Kura-Kura",
-                "Kuntilanak Merpati", "Pocong Kodok", "Tuyul Luwak", "Genderuwo Bebek", "Sundel Bolong Ikan Piranha",
-                "Wewe Gombel Kepiting", "Leak Burung Unta", "Begu Ganjang Ular Sanca", "Jenglot Kucing Hutan", "Banaspati Burung Elang",
-                "Kuyang Burung Hantu", "Kuntilanak Musang", "Pocong Katak Pohon", "Tuyul Kuda Laut", "Genderuwo Kalajengking",
-                "Sundel Bolong Ulat Bulu", "Wewe Gombel Ikan Arwana", "Leak Ular Kobra", "Begu Ganjang Buaya", "Jenglot Anjing Hutan",
-                "Banaspati Macan Tutul", "Kuyang Burung Dara", "Kuntilanak Kelelawar", "Pocong Anjing Kampung", "Tuyul Kucing Kampung",
-                "Genderuwo Burung Perkutut", "Sundel Bolong Kijang", "Wewe Gombel Ikan Lumba-Lumba", "Leak Ular Piton",
-                "Begu Ganjang Ular Hijau", "Jenglot Serigala", "Banaspati Elang Jawa", "Kuyang Tupai Terbang", "Kuntilanak Burung Hantu","Pocong Ular Sanca", "Tuyul Ular Kobra", "Genderuwo Singa Laut", "Sundel Bolong Babi Hutan", "Wewe Gombel Macan Kumbang",
-                "Leak Harimau", "Begu Ganjang Ular Piton", "Jenglot Singa Gunung", "Banaspati Buaya Darat", "Kuyang Ular King Cobra",
-                "Kuntilanak Singa Laut", "Pocong Kuda Nil", "Tuyul Babi Hutan", "Genderuwo Macan Tutul", "Sundel Bolong Ular Tedung Selar",
-                "Wewe Gombel Singa Liar", "Leak Ular Kobra Hitam", "Begu Ganjang Gajah Laut", "Jenglot Macan Liar", "Banaspati Ular Tedung",
-                "Kuyang Ular Sanca Raksasa", "Kuntilanak Singa Gunung", "Pocong Ular Tedung Selar", "Tuyul Macan Tutul", "Genderuwo Ular Kobra Hitam",
-                "Sundel Bolong Gajah Laut", "Wewe Gombel Macan Liar", "Leak Ular Tedung Selar", "Begu Ganjang Singa Gunung", "Jenglot Ular Kobra Hitam",
-                "Banaspati Gajah Laut", "Kuyang Buaya Muara", "Kuntilanak Macan Tutul", "Pocong Elang Hutan", "Tuyul Kuda Nil Liar",
-                "Genderuwo Babi Hutan", "Sundel Bolong Kura-Kura Darat", "Wewe Gombel Kucing Kampung", "Leak Ular Sanca Raksasa",
-                "Begu Ganjang Ular Besar", "Jenglot Macan Liar", "Banaspati Elang Gagak", "Kuyang Ular Kobra Hitam"
-            ];
-
-            // Ambil satu nama secara random dari listNama
-            var randomIndex = Math.floor(Math.random() * listNama.length);
-            var randomNama = listNama[randomIndex];
-
-            // Tampilkan hasil pada output
-            document.getElementById('outputNama').textContent = nama;
-            document.getElementById('outputCodam').textContent = randomNama;
-
-            // Simpan hasil ke dalam array previousResults
-            previousResults.push({ nama: nama, umur: umur, film: film });
+        function showPage(pageNumber) {
+            const pages = document.querySelectorAll('.page');
+            pages.forEach(page => page.classList.remove('active'));
+            document.getElementById('page' + pageNumber).classList.add('active');
         }
     </script>
 </body>
